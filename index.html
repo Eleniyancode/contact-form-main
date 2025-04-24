@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+  </head>
+  <body>
+    <form action="get" novalidate>
+      <h2>Contact Us</h2>
+      <div class="form-content">
+        <div class="full-name">
+          <div class="flex-input">
+            <label for="first-name">First Name</label>
+            <input type="text" name="FirstName" id="first-name" />
+          </div>
+
+          <div class="flex-input">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="LastName" id="last-name" />
+          </div>
+        </div>
+
+        <div class="flex-input email">
+          <label for="email">Email Address</label>
+          <input type="email" name="emailAddress" id="email-address" />
+        </div>
+
+        <div class="checkbox">
+          <p>Query Type</p>
+          <div class="checkbox-flex">
+            <div class="checkbox-flex-item">
+              <input type="checkbox" name="enquiry" id="general-enquiry" />
+              <label for="general-enquiry">General Enquiry</label>
+            </div>
+
+            <div class="checkbox-flex-item">
+              <input type="checkbox" name="enquiry" id="support-request" />
+              <label for="support-request">Support Request</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-input message">
+          <label for="message">Message</label>
+          <!-- <input type="text" name="message" id="message" /> -->
+          <textarea name="message" id="message"></textarea>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" name="consent" id="consent-box" />
+          <label for="consent-box"
+            >I hereby consent to being contacted by the team</label
+          >
+        </div>
+      </div>
+      <div class="btn"><button>Submit</button></div>
+    </form>
+
+    <!-- First Name This field is required Last Name This field is required Email
+    Address Please enter a valid email address This field is required Query Type
+    General Enquiry Support Request Please select a query type Message This
+    field is required I consent to being contacted by the team To submit this
+    form, please consent to being contacted Submit Message Sent! Thanks for
+    completing the form. We'll be in touch soon! -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
