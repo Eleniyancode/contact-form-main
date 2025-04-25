@@ -17,39 +17,47 @@
     <link rel="stylesheet" href="./reset.css" />
   </head>
   <body>
-    <form action="get" novalidate>
+    <form action="get" novalidate id="myForm">
       <h2>Contact Us</h2>
       <div class="form-content">
         <div class="full-name">
           <div class="flex-input">
             <label for="first-name">First Name</label>
             <input type="text" name="FirstName" id="first-name" />
+            <p id="error-first-name" class="error"></p>
+            <!--error message appear here-->
           </div>
 
           <div class="flex-input">
             <label for="last-name">Last Name</label>
             <input type="text" name="LastName" id="last-name" />
+            <p id="error-last-name" class="error"></p>
+            <!--error message appear here-->
           </div>
         </div>
 
         <div class="flex-input email">
-          <label for="email">Email Address</label>
+          <label for="email-address">Email Address</label>
           <input type="email" name="emailAddress" id="email-address" />
+          <p id="error-email" class="error"></p>
+          <!--error message appear here-->
         </div>
 
         <div class="checkbox">
           <p>Query Type</p>
           <div class="checkbox-flex">
             <div class="checkbox-flex-item">
-              <input type="checkbox" name="enquiry" id="general-enquiry" />
+              <input type="radio" name="enquiry" id="general-enquiry" />
               <label for="general-enquiry">General Enquiry</label>
             </div>
 
             <div class="checkbox-flex-item">
-              <input type="checkbox" name="enquiry" id="support-request" />
+              <input type="radio" name="enquiry" id="support-request" />
               <label for="support-request">Support Request</label>
             </div>
           </div>
+          <!--error message appear here-->
+          <p id="error-query" class="error"></p>
         </div>
 
         <div class="flex-input message">
@@ -60,10 +68,11 @@
 
         <div class="consent">
           <input type="checkbox" name="consent" id="consent-box" />
-          <label for="consent-box"
-            >I hereby consent to being contacted by the team</label
-          >
+          <label for="consent-box">
+            I hereby consent to being contacted by the team
+          </label>
         </div>
+        <p id="error-consent"></p>
       </div>
       <div class="btn"><button>Submit</button></div>
     </form>
@@ -75,10 +84,24 @@
     form, please consent to being contacted Submit Message Sent! Thanks for
     completing the form. We'll be in touch soon! -->
 
+    <!-- success message -->
+    <div id="success-message" class="success-message-box">
+      <div class="success-message-p1">
+        <img
+          class="success-icon"
+          src="./assets/images/icon-success-check.svg"
+          alt="success-icon"
+        />
+        <p>Message Sent!</p>
+      </div>
+      <p>Thanks for completing the form. We will be in touch soon!</p>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">EleniyanCode</a>.
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
