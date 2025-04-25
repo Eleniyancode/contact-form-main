@@ -46,13 +46,18 @@
         <div class="checkbox">
           <p>Query Type</p>
           <div class="checkbox-flex">
-            <div class="checkbox-flex-item">
+            <div class="checkbox-flex-item" id="general-enquiry-checkbox">
               <input type="radio" name="enquiry" id="general-enquiry" />
               <label for="general-enquiry">General Enquiry</label>
             </div>
 
-            <div class="checkbox-flex-item">
-              <input type="radio" name="enquiry" id="support-request" />
+            <div class="checkbox-flex-item" id="support-request-checkbox">
+              <input
+                type="radio"
+                class="enquiry"
+                name="enquiry"
+                id="support-request"
+              />
               <label for="support-request">Support Request</label>
             </div>
           </div>
@@ -64,6 +69,7 @@
           <label for="message">Message</label>
           <!-- <input type="text" name="message" id="message" /> -->
           <textarea name="message" id="message"></textarea>
+          <p id="error-message" class="error"></p>
         </div>
 
         <div class="consent">
