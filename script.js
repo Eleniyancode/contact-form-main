@@ -39,7 +39,7 @@ form.addEventListener("submit", (event) => {
   //   console.log("Form submission stopped");
   console.log(email.value, firstName.value, lastName.value);
   //radio button validation
-  const selected = document.querySelector('input[name="enquiry"]:checked');
+  let selected = document.querySelector('input[name="enquiry"]:checked');
 
   //email validation
   function validateEmail(email) {
@@ -87,6 +87,12 @@ form.addEventListener("submit", (event) => {
   } else {
     // alert("Form Completed");
     successMessage.style.display = "block";
+    firstName.value = "";
+    lastName.value = "";
+    message.value = "";
+    email.value = "";
+    document.querySelector('input[name="enquiry"]:unchecked');
+
     document.getElementById("error-email").textContent = "";
     document.getElementById("error-last-name").textContent = "";
     document.getElementById("error-first-name").textContent = "";
